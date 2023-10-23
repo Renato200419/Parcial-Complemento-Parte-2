@@ -1,10 +1,10 @@
 //20224111E
 package uni.aed.Biblioteca;
 
-import java.util.LinkedList; //Se importa la clase LinkedList para poder extenderla
+import uni.aed.linkedlistTDA.LinkedListTDA; // Se importa la clase LinkedListTDA para poder extenderla
 
-public class BookList extends LinkedList{
-    // Se llama al constructor de la clase padre LinkedList usando 'super()'.
+public class BookList extends LinkedListTDA<Book> {
+    // Se llama al constructor de la clase padre LinkedListTDA usando 'super()'.
     public BookList(){
         super();
     }

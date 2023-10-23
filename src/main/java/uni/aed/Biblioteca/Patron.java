@@ -1,9 +1,12 @@
 //20224111E
 package uni.aed.Biblioteca;
 
+import uni.aed.linkedlistTDA.LinkedListTDA; // Importa la clase LinkedListTDA
+import uni.aed.listTDA.ListTDA;  // Importa la interfaz ListTDA
+
 public class Patron {
     public String name;     // Variable de instancia para almacenar el nombre del patron.
-    public BookList books = new BookList(); // Variable de instancia que representa una lista de libros que el patron tiene prestados.
+    public ListTDA books = new LinkedListTDA(); // Variable de instancia que representa una lista de libros que el patron tiene prestados.
     public Patron() { // Constructor por defecto
     }
     
@@ -17,7 +20,7 @@ public class Patron {
     public void display(){
         if(!books.isEmpty()){ //Si el patron tiene libros prestados
             System.out.println(name + " tiene los libros siguientes:");
-            books.display();
+            books.imprimir();
         }
         else System.out.println(name + " no tiene libros"); //Si el patron no tiene libros prestados
     }

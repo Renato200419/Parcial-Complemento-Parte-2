@@ -84,7 +84,7 @@ public class Library {
         // un usuario nuevo en la biblioteca;
             patron.books.add(bookToCheckOut);
             people[(int) patron.name.charAt(0) ].add (patron);
-            bookRef.patron = (Patron) people[ (int)patron.name.charAt(0)].getFirst();
+            bookRef.patron = (Patron) people[ (int)patron.name.charAt(0)].get(0);
         }
         else {
             patronRef = (Patron) people[(int)patron.name.charAt(0)].get(patronIndex);
@@ -119,7 +119,7 @@ public class Library {
         checkedOutBook.author = authorRef;
         checkedOutBook.book = (Book) authorRef.books.get(bookIndex) ;
         ((Book)authorRef.books.get(bookIndex) ) .patron = null;
-        ((Patron) people[(int) patron.name.charAt(0) ].get(patronIndex)).books.remove(checkedOutBook) ;
+        ((Patron) people[(int) patron.name.charAt(0) ].get(patronIndex)).books.delete(checkedOutBook) ;
 } 
 // Método principal para ejecutar la aplicación de la biblioteca.
     public void run( ) {
